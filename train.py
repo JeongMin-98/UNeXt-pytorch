@@ -36,7 +36,7 @@ def parse_args():
                         help='model name: (default: arch+timestamp)')
     parser.add_argument('--epochs', default=100, type=int, metavar='N',
                         help='number of total epochs to run')
-    parser.add_argument('-b', '--batch_size', default=16, type=int,
+    parser.add_argument('-b', '--batch_size', default=4, type=int,
                         metavar='N', help='mini-batch size (default: 16)')
     
     # model
@@ -59,9 +59,9 @@ def parse_args():
                         ' (default: BCEDiceLoss)')
     
     # dataset
-    parser.add_argument('--dataset', default='isic',
+    parser.add_argument('--dataset', default='testcoco',
                         help='dataset name')
-    parser.add_argument('--img_ext', default='.png',
+    parser.add_argument('--img_ext', default='.jpg',
                         help='image file extension')
     parser.add_argument('--mask_ext', default='.png',
                         help='mask file extension')
